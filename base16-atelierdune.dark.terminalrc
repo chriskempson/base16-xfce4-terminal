@@ -1,5 +1,5 @@
 [Configuration]
-ColorCursor=#a6a6a2a28c8c
-ColorForeground=#a6a6a2a28c8c
-ColorBackground=#202020201d1d
-ColorPalette=#202020201d1d;#d7d737373737;#6060acac3939;#cfcfb0b01717;#66668484e1e1;#b8b85454d4d4;#1f1fadad8383;#a6a6a2a28c8c;#7d7d7a7a6868;#d7d737373737;#6060acac3939;#cfcfb0b01717;#66668484e1e1;#b8b85454d4d4;#1f1fadad8383;#fefefbfbecec
+ColorCursor=#a6a28c
+ColorForeground=#a6a28c
+ColorBackground=#20201d
+ColorPalette=#20201d;#d73737;#60ac39;#cfb017;#6684e1;#b854d4;#1fad83;#a6a28c;#7d7a68;#d73737;#60ac39;#cfb017;#6684e1;#b854d4;#1fad83;#fefbec
