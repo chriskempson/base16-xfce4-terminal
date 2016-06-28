@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+description = %{
+# Installation script for base16-xfce4-terminal
+# https://github.com/chriskempson/base16-xfce4-terminal
+}
+
+require 'fileutils'
+
+colors_path = ARGV.first
+config_path = "#{Dir.home}/.config/xfce4/terminal/terminalrc"
+
+unless colors_path
+  puts "#{description}\nUsage: ./install <colorsheme.terminalrc>"
+  exit 1
+end
+
+if File.file? config_path
+  config = File.readlines(config_path).reject{|l| l.include? 'Color'}.join('')
+  colors = File.readlines(colors_path)[1..-1].join('')
+  FileUtils.cp config_path, "#{config_path}.bak"
+  File.open(config_path, 'w') { |f| f.write(config + colors) }
+else
+  FileUtils.cp colors_path, config_path
+end
