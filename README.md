@@ -14,6 +14,21 @@ $ cd base16-xfce4-terminal
 $ ./install base16-eighties.dark.terminalrc
 ```
 
+### Alternative themes install
+Open terminal and type:
+```bash
+$ git clone https://github.com/chriskempson/base16-xfce4-terminal
+$ cd base16-xfce4-terminal
+$ php convert2theme.php
+$ cd themes
+$ sudo cp *.theme /usr/share/xfce4/terminal/colorschemes/
+```
+Now you can choose theme from XFCE terminal -> Preferences -> Colors -> Presets.  
+**Uninstall base16 themes:**  
+```bash
+$ sudo rm -r /usr/share/xfce4/terminal/colorschemes/base16-*.theme
+```
+
 ### Manual
 
 Run `mousepad ~/.config/xfce4/terminal/terminalrc` in the terminal
