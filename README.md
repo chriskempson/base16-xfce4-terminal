@@ -1,5 +1,6 @@
-Base16 for XFCE4 Terminal
-=========================
+# DEPRECATED, see: https://github.com/afg984/base16-xfce4-terminal
+
+# Base16 for XFCE4 Terminal
 
 ![Base16 XFCE4 Terminal](https://raw.github.com/illarionK/base16-xfce4-terminal/master/base16-xfce4-terminal.png)
 
