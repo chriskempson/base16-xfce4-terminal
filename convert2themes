@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+description = %{
+# Converter script for base16-xfce4-terminal
+# https://github.com/chriskempson/base16-xfce4-terminal
+}
+
+themesFolder = "./themes"
+
+if Dir.exists? themesFolder
+    puts "folder \"#{themesFolder}\" already exists"
+else
+    Dir.mkdir themesFolder
+end
+
+Dir.glob("./*.terminalrc") do |x| 
+    rc = File.read(x)
+    themeName = x.gsub(/\.\/(.*)\.terminalrc/,'\1') 
+    rc = rc.gsub(/^\[Configuration\][\n\r]+/, "[Scheme]\nName=#{themeName}\n")
+    themeFile = x.gsub(/\.\/(.*)\.terminalrc/,'\1.theme')
+    File.write("#{themesFolder}/#{themeFile}", rc)
+    puts "convert #{x} -> #{themesFolder}/#{themeFile}"
+end
+
+puts "convert complete. bye."
